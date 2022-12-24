@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onsbumit</title>
+  </head>
+  <body>
+    <form onsubmit="enviar()">
+      <label for="">Informe sua identidade:</label><br>
+
+      <input type="text" placeholder="18" id="age" />
+      <br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+      function enviar(){
+         const idade = document.getElementById('age');
+
+         if(idade.value < 18){
+            alert('é menor de idade')
+         }
+         else{
+            alert('é maior de idade')
+         }
+      }
+    </script>
+  </body>
+</html>

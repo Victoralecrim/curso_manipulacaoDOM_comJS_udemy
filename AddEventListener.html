@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Evento AddEventListener</title>
+</head>
+<body>
+   <form id="form">
+      <label for="">Informe sua identidade:</label><br>
+
+      <input type="text" placeholder="18" id="age" />
+      <br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <button id="btn">Diga ola</button>
+
+    <script>
+      const form = document.getElementById("form");
+
+      form.addEventListener('submit',enviar);
+
+      function enviar(e){
+         e.preventDefault();
+
+         const idade = document.getElementById('age');
+
+         if(idade.value < 18){
+            alert('é menor de idade')
+         }
+         else{
+            alert('é maior de idade')
+         }
+      }
+
+      const btn = document.getElementById('btn');
+
+      btn.addEventListener('click',function(){
+         alert('Olá');
+      });
+    </script>
+</body>
+</html>

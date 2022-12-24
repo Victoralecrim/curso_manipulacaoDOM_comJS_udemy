@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulação da DOM com JS - ClassList Elemento</title>
+
+    <style>
+      .blue {
+        color: blue;
+      }
+
+      .red {
+        color: red;
+      }
+      .black {
+        background-color: black;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="mudaConteudo()">
+      <p id="text" class="texto">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe non
+        laudantium, incidunt praesentium neque at fuga unde itaque porro optio
+        ducimus a, eveniet quae reiciendis. Explicabo quam alias doloremque
+        aliquam!
+      </p>
+    </button>
+
+    <br /><br />
+    <button onclick="mudarBackground()">Mudar background</button>
+
+    <img
+      id="hide-image"
+      src="https://cdn.awsli.com.br/1012/1012749/produto/37813621/8577cef3ec.jpg"
+      width="100"
+      height="100"
+      alt=""
+    />
+    <button id="hide-content">Esconder conteudo</button>
+
+    <script>
+      function mudaConteudo() {
+        let texto = document.getElementById("text");
+        texto.classList.toggle("red");
+        texto.classList.toggle("black");
+
+      }
+
+      function mudarBackground() {
+        var body = document.body;
+        body.classList.toggle("black");
+      }
+
+      var button = document.getElementById("hide-content");
+      
+      button.addEventListener("click", function () {
+        var img = document.getElementById("hide-image");
+        
+        if (img.style.display === "none") {
+          img.style.display = "block";
+        }
+        else{
+          img.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

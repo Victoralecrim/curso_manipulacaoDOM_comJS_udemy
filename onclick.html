@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Onlclick</title>
+
+   <style>
+      div{
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         border-radius: 10px;
+         margin-top: 20px;
+         display: none;
+      }
+   </style>
+</head>
+<body>
+   <button onclick="saudacoes()">Diga olá</button>
+   <button onclick="mostraCaixa()">Mostrar caixa</button>
+
+   <div id="caixa"></div>
+
+   <script>
+      function saudacoes(){
+         alert("ola :)");
+      }
+
+      function mostraCaixa(){
+         const caixa = document.getElementById("caixa");
+
+         caixa.style.display = "block";
+      }
+   </script>
+</body>
+</html>
